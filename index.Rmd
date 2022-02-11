@@ -6,7 +6,7 @@ output:
     vertical_layout: fill
 ---
 
-```{r setup, echo=TRUE, include=FALSE}
+```{r setup, echo=TRUE, include=TRUE}
 #------------------ Packages ------------------
 
 # install required packages
