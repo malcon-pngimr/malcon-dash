@@ -18,5 +18,4 @@ jobs:
         run: |
             bash ./scripts/data_refresh.sh "main" "$PAT_KEY" 
         env:     
-          $PAT_KEY: ${{ secrets.$PAT_KEY }}
-          
+          PAT_KEY: ${{ secrets.PAT_KEY }} 
