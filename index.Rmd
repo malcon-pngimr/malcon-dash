@@ -133,8 +133,7 @@ Column { data-width=425 }
 
 ```{r}
 ### Success Rate
-renderGauge({
-  gauge(
+gauge(
     round(province_complete/22*100, 0), min = 0, max = 100, symbol = '%', 
     label = "Total province completed: `r province_complete` / 22",
     sectors = gaugeSectors(
@@ -143,7 +142,6 @@ renderGauge({
       success = c(80, 100)
     )
   )  
-})
 ```
 
 Column { data-width=425 }
