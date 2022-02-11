@@ -82,7 +82,7 @@ last_submission <- hfc_v3 %>%
 
 province_complete <- hfc_v3 %>% 
     dplyr::distinct(hfs_001A) %>% 
-    dplyr::summarize(n = n()) %>%
+    dplyr::summarize(n = dplyr::n()) %>%
     unlist
 
 print("rnaturalearth" %in% installed.packages())
