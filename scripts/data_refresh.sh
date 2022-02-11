@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-Rscript -e "source('./data_raw/data_refresh.R')" $2
+Rscript -e "source('./scripts/data_refresh.R')" $2
 
 
 if [[ "$(git status --porcelain)" != "" ]]; then
