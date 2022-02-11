@@ -34,8 +34,7 @@ for (x in 1:length(fid)) {
     
     assign(fid[x], read.csv(temp_file, stringsAsFactors = FALSE))
 }
-print(search())
-print(installed.packages())
+print(ls())
 ```
 
 
