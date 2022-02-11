@@ -77,7 +77,7 @@ hfc_v3 <- hfc_v3 %>%
     dplyr::mutate(hfs_00X = as.Date(sub("T.*", "", hfs_00X), format = "%Y-%m-%d"), 
            hfs_011 = as.Date(hfs_011, format = "%Y-%m-%d")) 
 
-hfc_last_submission <- hfc_v3 %>% 
+last_submission <- hfc_v3 %>% 
     dplyr::filter(hfs_00X == max(hfs_00X))
 
 
@@ -94,14 +94,22 @@ Summary
 Column { data-width=150 }
 -----------------------------------------------------------------------
 
-### last_submission {.value-box}
+### last Submission {.value-box}
 ```{r}
-valueBox(value = hfc_last_submission$hfs_00X[1], 
-         caption = "Last submission made on", 
-         icon = "fas fa-calendar-arrow-up", 
+valueBox(value = last_submission$hfs_00X[1], 
+         caption = "Date of last submission", 
+         icon = "fas fa-calendar", 
          color = tested_color)
 ```
 
+### Positive Cases {.value-box}
+
+```{r}
+valueBox(value = nrow(hfc_v3), 
+         caption = "Total submission", 
+         icon = "fas fa-upload", 
+         color = positive_color)
+```
 
 Column { data-width=425 }
 -----------------------------------------------------------------------
