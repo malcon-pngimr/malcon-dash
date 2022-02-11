@@ -34,9 +34,7 @@ for (x in 1:length(fid)) {
                   temp_file)
     
     ds <- read.csv(temp_file, stringsAsFactors = FALSE)
-    print(names(ds))
 }
 
-# rmarkdown::renders_site()
-
-print(installed.packages())
+# render site
+rmarkdown::render_site()
