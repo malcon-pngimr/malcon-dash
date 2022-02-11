@@ -46,5 +46,3 @@ hfc <- hfc_v3 %>%
            hfs_011 = as.Date(hfs_011, format = "%Y-%m-%d")) 
 
 
-hfc 
-
