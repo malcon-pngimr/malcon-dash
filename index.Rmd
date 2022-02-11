@@ -2,9 +2,6 @@
 title: "Covid19 Italy"
 output: 
   flexdashboard::flex_dashboard:
-    css: style.css
-    social: menu
-    source_code: embed
     orientation: columns
     vertical_layout: fill
 ---
@@ -13,5 +10,17 @@ output:
 #------------------ Packages ------------------
 library(flexdashboard)
 
+
+for (x in 1:length(fid)) {
+    temp_file <- tempdir()
+    
+    temp_file <- paste(temp_file, "/", fid[x], ".csv", sep = "")
+    download.file(paste("https://", pat_key, "@", raw_url, fid[x], ".csv", sep = ""), 
+                  temp_file)
+    
+    ds <- read.csv(temp_file, stringsAsFactors = FALSE)
+    print(names(ds))
+}
 print(search())
+print(installed.packages())
 ```
