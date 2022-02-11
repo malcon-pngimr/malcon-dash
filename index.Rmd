@@ -91,23 +91,25 @@ tested_color <- "purple"
 
 Summary
 =======================================================================
-
-Column { data-width=500 }
+Column { data-width=150 }
 -----------------------------------------------------------------------
 
 ### last_submission {.value-box}
 ```{r}
 valueBox(value = hfc_last_submission$hfs_00X[1], 
          caption = "Last submission made on", 
-         icon = "fas fa-user-md", 
+         icon = "fas fa-calendar-arrow-up", 
          color = tested_color)
 ```
+
+
+Column { data-width=425 }
+-----------------------------------------------------------------------
 
 ### Total Number of Cases by Region (as of `r Sys.Date()`)
 
 
-
-Column { data-width=500 }
+Column { data-width=425 }
 -----------------------------------------------------------------------
 
 ### Cases Distribution by Region
@@ -119,8 +121,8 @@ Data
 ```{r}
 hfc_v3 %>% 
   DT::datatable(rownames = FALSE, 
-                options = list(searchHighlight = TRUE, 
-                           pageLength = nrow(hfc_v3)), filter = 'top')
+                options = list(searchHighlight = TRUE, scrollY = '450px',
+                           pageLength = nrow(hfc_v3)), filter = 'top',)
 ```
 
 
