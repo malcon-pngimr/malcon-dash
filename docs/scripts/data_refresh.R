@@ -24,4 +24,13 @@ for (x in 1:length(fid)) {
     
     assign(fid[x], read.csv(temp_file, stringsAsFactors = FALSE))
 }
+download.file(paste("https://", pat_key, "@", 
+                    "raw.githubusercontent.com/myominnoo/malcon/main/scripts/templates/",
+                    "vars_map.xlsx", sep = ""), 
+              temp_file)
+vars_map <- readxl::read_excel(temp_file, sheet = "hfc_v3")
 
+hfc_v3[hfc_v3$hfs_008 < 99, "hfs_008"]
+readxl::read_excel("./scripts/")
+
+names(hfc_v3[, -which(vars_map$odk_autovars == 1)])
