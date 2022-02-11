@@ -29,7 +29,7 @@ raw_url <- "raw.githubusercontent.com/myominnoo/malcon/main/data/"
 for (x in 1:length(fid)) {
     temp_file <- tempdir()
     
-    temp_file <- paste(temp, "/", fid[x], ".csv", sep = "")
+    temp_file <- paste(temp_file, "/", fid[x], ".csv", sep = "")
     download.file(paste("https://", pat_key, "@", raw_url, fid[x], ".csv", sep = ""), 
                   temp_file)
     
