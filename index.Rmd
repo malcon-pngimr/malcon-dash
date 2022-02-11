@@ -1,14 +1,25 @@
 ---
-title: "Covid19 Italy"
+title: "HFS 2021 - MalCon"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
     vertical_layout: fill
 ---
 
-```{r setup, include=FALSE}
+```{r setup, echo=TRUE}
 #------------------ Packages ------------------
+
+# install required packages
+install.packages("flexdashboard", dependencies = TRUE)
+
 library(flexdashboard)
+
+# set global variables
+hfc_v3 <- NULL
+pi_v3 <- NULL
+ppa_v3 <- NULL
+ei_v3 <- NULL
+fvs_v1 <- NULL
 
 
 for (x in 1:length(fid)) {
@@ -18,9 +29,53 @@ for (x in 1:length(fid)) {
     download.file(paste("https://", pat_key, "@", raw_url, fid[x], ".csv", sep = ""), 
                   temp_file)
     
-    ds <- read.csv(temp_file, stringsAsFactors = FALSE)
-    print(names(ds))
+    assign(fid[x], read.csv(temp_file, stringsAsFactors = FALSE))
 }
 print(search())
 print(installed.packages())
 ```
+
+
+Summary
+=======================================================================
+
+Column { data-width=500 }
+-----------------------------------------------------------------------
+
+### Total Number of Cases by Region (as of `r max(italy_region$date)`)
+
+
+
+Column { data-width=500 }
+-----------------------------------------------------------------------
+
+### Cases Distribution by Region
+
+
+Data
+=======================================================================
+
+```{r}
+hfc_v3 %>% 
+  DT::datatable(rownames = FALSE,
+            options = list(searchHighlight = TRUE, 
+                           pageLength = nrow(hfc_v3)), filter = 'top')
+```
+
+
+About
+=======================================================================
+**The MalCon PNGIMR Dashboard**
+
+This [MalCon PNGIMR Dashboard](https://myominnoo.github.io/malcon-dash/) provides an overview of the progress of the health facility survey 2021 conducted by the Malaria Control Section (MalCon) at the Papua New Guinea Institute of Medical Research (PNGMIR). This dashboard is built in the framework of reproducibile research using Rmarkdown and GitHub action workflows.
+
+**Data**
+
+The input data for this dashboard are from the ODK Central platform that is hosted by Swiss Tropical and Public Health Institute. The data and dashboard are refreshed on a daily basis.
+
+**Packages**
+
+- Dashboard interface - the flexdashboard package.
+- Visualization - the plotly package for the plots and mapview package for the map
+- Data manipulation - dplyr, and tidyr
+- Tables - the DT package
