@@ -107,6 +107,28 @@ Summary
 Column { data-width=150 }
 -----------------------------------------------------------------------
 
+### Number output `r round(province_complete/22*100, 2)`
+
+```{r}
+### Success Rate
+round(province_complete/22*100, 2)
+```
+
+### Survey Progress {.gauge}
+```{r}
+### Success Rate
+gauge(
+    round(province_complete/22*100, 0), min = 0, max = 100, symbol = '%', 
+    label = "Total province completed: `r province_complete` / 22",
+    sectors = gaugeSectors(
+      danger = c(0, 20),
+      warning = c(20, 80),
+      success = c(80, 100)
+    )
+  )  
+```
+
+
 ### last Submission Date {.value-box}
 ```{r}
 valueBox(value = last_submission$hfs_00X[1], 
@@ -131,18 +153,6 @@ Column { data-width=425 }
 
 ### Survey Progress by Province (as of `r Sys.Date()`)
 
-```{r}
-### Success Rate
-gauge(
-    round(province_complete/22*100, 0), min = 0, max = 100, symbol = '%', 
-    label = "Total province completed: `r province_complete` / 22",
-    sectors = gaugeSectors(
-      danger = c(0, 20),
-      warning = c(20, 80),
-      success = c(80, 100)
-    )
-  )  
-```
 
 Column { data-width=425 }
 -----------------------------------------------------------------------
