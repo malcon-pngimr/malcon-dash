@@ -80,7 +80,7 @@ hfc_v3 <- hfc_v3 %>%
 last_submission <- hfc_v3 %>% 
     dplyr::filter(hfs_00X == max(hfs_00X))
 
-province_complete <- hfc %>% 
+province_complete <- hfc_v3 %>% 
     dplyr::distinct(hfs_001A) %>% 
     dplyr::summarize(n = n()) %>%
     unlist
