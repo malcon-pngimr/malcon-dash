@@ -14,6 +14,7 @@ output:
 
 # install required packages
 install.packages("flexdashboard", dependencies = TRUE)
+install.packages("graphite2", dependencies = TRUE)
 
 # load required packages
 library(magrittr)
@@ -28,6 +29,13 @@ library(flexdashboard)
 # -------------------------------------------------------------------------
 
 # Set Global Environment --------------------------------------------------
+
+
+#------------------ Parameters ------------------
+# Set colors
+# https://www.w3.org/TR/css-color-3/#svg-color
+tested_color <- "purple"
+
 
 # Set PAT_KEY
 (pat_key <- Sys.getenv("PAT_KEY"))
@@ -69,6 +77,14 @@ for (x in 1:length(fid)) {
 # remove all except fid names 
 rm(list = setdiff(ls(), fid))
 print(ls())
+
+hfc_v3 <- hfc_v3 %>% 
+    dplyr::select(hfs_00X:hfs_010) %>%
+    dplyr::mutate(hfs_00X = as.Date(sub("T.*", "", hfs_00X), format = "%Y-%m-%d"), 
+           hfs_011 = as.Date(hfs_011, format = "%Y-%m-%d")) 
+
+hfc_last_submission <- hfc_v3 %>% 
+    dplyr::filter(hfs_00X == max(hfs_00X))
 ```
 
 
@@ -77,6 +93,14 @@ Summary
 
 Column { data-width=500 }
 -----------------------------------------------------------------------
+
+### last_submission {.value-box}
+```{r}
+valueBox(value = hfc_last_submission$hfs_00X[1], 
+         caption = "Last submission made on", 
+         icon = "fas fa-user-md", 
+         color = tested_color)
+```
 
 ### Total Number of Cases by Region (as of `r Sys.Date()`)
 
@@ -93,9 +117,9 @@ Data
 
 ```{r}
 hfc_v3 %>% 
-  DT::datatable(rownames = FALSE,
-            options = list(searchHighlight = TRUE), 
-            filter = 'top')
+  DT::datatable(rownames = FALSE, 
+                options = list(searchHighlight = TRUE, 
+                           pageLength = nrow(hfc_v3)), filter = 'top')
 ```
 
 
