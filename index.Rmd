@@ -12,7 +12,10 @@ output:
 # install required packages
 install.packages("flexdashboard", dependencies = TRUE)
 
+# load required packages
 library(flexdashboard)
+
+`%>%` <- magrittr::`%>%`
 
 # set global variables
 hfc_v3 <- NULL
