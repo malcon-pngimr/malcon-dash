@@ -86,6 +86,14 @@ last_submission <- hfc_v3 %>%
 # Set colors
 # https://www.w3.org/TR/css-color-3/#svg-color
 tested_color <- "purple"
+positive_color <- RColorBrewer::brewer.pal(9, "PuRd")[7]
+active_color <- "#1f77b4"
+recovered_color <- "forestgreen"
+# death_color <- "#660708"
+death_color <- "red"
+intensive_care_color <- "#ba181b"
+h_symptoms_color <- "#e5383b"
+home_conf_color <- "#FDBBBC"
 ```
 
 
@@ -129,7 +137,7 @@ Data
 ```{r}
 hfc_v3 %>% 
   DT::datatable(rownames = FALSE, 
-                options = list(searchHighlight = TRUE, scrollY = '450px',
+                options = list(searchHighlight = TRUE, scrollY = '600px',
                            pageLength = nrow(hfc_v3)), filter = 'top',)
 ```
 
