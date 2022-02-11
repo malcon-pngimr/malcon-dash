@@ -34,3 +34,17 @@ hfc_v3[hfc_v3$hfs_008 < 99, "hfs_008"]
 readxl::read_excel("./scripts/")
 
 names(hfc_v3[, -which(vars_map$odk_autovars == 1)])
+
+
+hfc <- hfc_v3[, 1:20]
+names(hfc)
+
+library(tidyverse)
+hfc_v3 %>% 
+    select(hfs_00X:hfs_010) %>%
+    mutate(hfs_00X = as.Date(sub("T.*", "", hfs_00X), format = "%Y-%m-%d"), 
+           hfs_011 = as.Date(hfs_011, format = "%Y-%m-%d")) %>%
+    # group_by(hfs_001A, hfs_002A, year, month) %>% 
+    group_by(hfs_007, hfs_001A, ym) %>%
+    summarise(total_hf = n())
+
