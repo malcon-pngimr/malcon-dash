@@ -15,7 +15,6 @@ install.packages("flexdashboard", dependencies = TRUE)
 # load required packages
 library(flexdashboard)
 
-`%>%` <- magrittr::`%>%`
 
 
 # -------------------------------------------------------------------------
@@ -88,6 +87,8 @@ Data
 =======================================================================
 
 ```{r}
+`%>%` <- magrittr::`%>%`
+
 hfc_v3 %>% 
   DT::datatable(rownames = FALSE,
             options = list(searchHighlight = TRUE, 
