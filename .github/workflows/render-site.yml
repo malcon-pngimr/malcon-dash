@@ -8,7 +8,7 @@ jobs:
     name: refresh the dashboard
     runs-on: ubuntu-18.04 
     container: 
-     image: myominnoo/tidyverse:dev0.1
+     image: myominnoo/dashboard:malcon0.1
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
