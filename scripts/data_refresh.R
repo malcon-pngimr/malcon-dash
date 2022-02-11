@@ -39,4 +39,4 @@ for (x in 1:length(fid)) {
 
 # rmarkdown::renders_site()
 
-print(search())
+print(installed.packages())
