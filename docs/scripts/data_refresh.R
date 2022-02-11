@@ -4,10 +4,6 @@
 # Source: ODK Central - Swiss TPH
 # -------------------------------------------------------------------------
 
-# install required packages
-install.packages("flexdashboard", dependencies = TRUE)
-
-
 # Set Global Environment --------------------------------------------------
 
 # Set PAT_KEY
