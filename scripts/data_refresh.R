@@ -37,4 +37,6 @@ for (x in 1:length(fid)) {
     print(names(ds))
 }
 
-rmarkdown::renders_site()
+# rmarkdown::renders_site()
+
+print(search())
