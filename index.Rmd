@@ -31,12 +31,6 @@ library(flexdashboard)
 # Set Global Environment --------------------------------------------------
 
 
-#------------------ Parameters ------------------
-# Set colors
-# https://www.w3.org/TR/css-color-3/#svg-color
-tested_color <- "purple"
-
-
 # Set PAT_KEY
 (pat_key <- Sys.getenv("PAT_KEY"))
 
@@ -85,6 +79,13 @@ hfc_v3 <- hfc_v3 %>%
 
 hfc_last_submission <- hfc_v3 %>% 
     dplyr::filter(hfs_00X == max(hfs_00X))
+
+
+
+#------------------ Parameters ------------------
+# Set colors
+# https://www.w3.org/TR/css-color-3/#svg-color
+tested_color <- "purple"
 ```
 
 
