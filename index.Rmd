@@ -107,22 +107,6 @@ Summary
 Column { data-width=150 }
 -----------------------------------------------------------------------
 
-### Province Completed
-```{r}
-### Success Rate
-renderGauge({
-  gauge(
-    round(province_complete/22*100, 0), min = 0, max = 100, symbol = '%', 
-    label = "Total province completed: `r province_complete` / 22",
-    sectors = gaugeSectors(
-      danger = c(0, 20),
-      warning = c(20, 80),
-      success = c(80, 100)
-    )
-  )  
-})
-```
-
 ### last Submission Date {.value-box}
 ```{r}
 valueBox(value = last_submission$hfs_00X[1], 
@@ -145,8 +129,22 @@ valueBox(value = nrow(hfc_v3),
 Column { data-width=425 }
 -----------------------------------------------------------------------
 
-### Total Number of Cases by Region (as of `r Sys.Date()`)
+### Survey Progress by Province (as of `r Sys.Date()`)
 
+```{r}
+### Success Rate
+renderGauge({
+  gauge(
+    round(province_complete/22*100, 0), min = 0, max = 100, symbol = '%', 
+    label = "Total province completed: `r province_complete` / 22",
+    sectors = gaugeSectors(
+      danger = c(0, 20),
+      warning = c(20, 80),
+      success = c(80, 100)
+    )
+  )  
+})
+```
 
 Column { data-width=425 }
 -----------------------------------------------------------------------
