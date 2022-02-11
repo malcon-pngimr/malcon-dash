@@ -148,14 +148,20 @@ valueBox(value = nrow(hfc_v3),
 
 
 
-Column { data-width=425 }
+Row 
 -----------------------------------------------------------------------
 
 ### Survey Progress by Province (as of `r Sys.Date()`)
 
-
-Column { data-width=425 }
------------------------------------------------------------------------
+```{r}
+rnaturalearth::ne_states(country = "Papua New Guinea", returnclass = "sf") %>%
+  dplyr::select(province = name, region, geometry) %>%
+  dplyr::group_by(region) %>%
+  dplyr::summarise(n = dplyr::n()) %>% 
+  DT::datatable(rownames = FALSE, 
+                options = list(searchHighlight = TRUE, scrollY = '600px'),
+                filter = 'top',)
+```
 
 ### Cases Distribution by Region
 
@@ -166,8 +172,8 @@ Data
 ```{r}
 hfc_v3 %>% 
   DT::datatable(rownames = FALSE, 
-                options = list(searchHighlight = TRUE, scrollY = '600px',
-                           pageLength = nrow(hfc_v3)), filter = 'top',)
+                options = list(searchHighlight = TRUE, scrollY = '600px'), 
+                filter = 'top',)
 ```
 
 
