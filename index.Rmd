@@ -3,9 +3,9 @@ title: "Health Facility Survey 2021 - MalCon"
 output: 
   flexdashboard::flex_dashboard:
     css: style.css
-    social: menu
-    source_code: embed
-    orientation: columns
+    # social: menu
+    # source_code: embed
+    orientation: rows
     vertical_layout: fill
 ---
 
