@@ -1,0 +1,17 @@
+---
+title: "US Electricity"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns  #change this to "rows"
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+### Demand Forecast
+
+
+### Generation
+
