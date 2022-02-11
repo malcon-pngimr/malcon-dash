@@ -94,8 +94,8 @@ Data
 ```{r}
 hfc_v3 %>% 
   DT::datatable(rownames = FALSE,
-            options = list(searchHighlight = TRUE, 
-                           pageLength = nrow(hfc_v3)), filter = 'top')
+            options = list(searchHighlight = TRUE), 
+            filter = 'top')
 ```
 
 
