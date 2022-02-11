@@ -1,16 +1,16 @@
 name: Data Refresh
 
-on: 
-  schedule:  
-    - cron:  '0 */1 * * *'
+on:
+  push:
+    branches: [ main ]
 jobs:
   build:
     name: refresh the dashboard
     runs-on: ubuntu-18.04 
     container: 
-     image: rkrispin/us_electricity:dev.0.0.0.9000
+     image: myominnoo/tidyverse:dev0.1
     steps:
-      - name: checkout_repo
+      - name: Checkout Repo
         uses: actions/checkout@v2
         with: 
           ref: 'main'
