@@ -2,18 +2,23 @@
 title: "Health Facility Survey 2021 - MalCon"
 output: 
   flexdashboard::flex_dashboard:
+    css: style.css
+    social: menu
+    source_code: embed
     orientation: columns
     vertical_layout: fill
 ---
 
-```{r setup, echo=TRUE, include=TRUE}
+```{r setup, echo=TRUE, include=FALSE}
 #------------------ Packages ------------------
 
 # install required packages
 install.packages("flexdashboard", dependencies = TRUE)
 
 # load required packages
+library(magrittr)
 library(flexdashboard)
+
 
 
 
@@ -87,8 +92,6 @@ Data
 =======================================================================
 
 ```{r}
-`%>%` <- magrittr::`%>%`
-
 hfc_v3 %>% 
   DT::datatable(rownames = FALSE,
             options = list(searchHighlight = TRUE, 
