@@ -1,2 +1,17 @@
-# A summary dashboard of the Malaria Control Section @ Papua New Guinea Institute of Medical Research
+---
+title: "Covid19 Italy"
+output: 
+  flexdashboard::flex_dashboard:
+    css: style.css
+    social: menu
+    source_code: embed
+    orientation: columns
+    vertical_layout: fill
+---
 
+```{r setup, include=FALSE}
+#------------------ Packages ------------------
+library(flexdashboard)
+
+print(search())
+```
