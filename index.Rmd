@@ -42,7 +42,7 @@ Summary
 Column { data-width=500 }
 -----------------------------------------------------------------------
 
-### Total Number of Cases by Region (as of `r max(italy_region$date)`)
+### Total Number of Cases by Region (as of `r Sys.Date()`)
 
 
 
