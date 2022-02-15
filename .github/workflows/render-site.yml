@@ -1,15 +1,14 @@
 name: Render HFS Dashboard site
 
-on:
-  push:
-    branches: [ main ]
+# on:
+#   push:
+#     branches: [ main ]
 jobs:
   build:
     name: render dashboard site
     runs-on: ubuntu-18.04 
     container: 
-     image: docker.io/rkrispin/covid19italy_dash:dev
-     # image: myominnoo/dashboard:malcon0.1
+     image: myominnoo/dashboard:malcon0.1
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
