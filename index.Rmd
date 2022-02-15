@@ -1,5 +1,5 @@
 ---
-title: "Untitled"
+title: "Health Facility Survey 2021: The MalCon Monitoring Dashboard"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -11,29 +11,76 @@ source("scripts/dash_setup.R")
 library(flexdashboard)
 ```
 
-Column {data-width=650}
+Summary
+=======================================================================
+
+Column { data-width=150 }
 -----------------------------------------------------------------------
 
-### Chart A
+### Survey Progress - `r province_complete` / 22 provinces completed {.gauge}
 
 ```{r}
-hf_num
+### Success Rate
+gauge(
+    province_complete_pct, min = 0, max = 100, symbol = '%', 
+    sectors = gaugeSectors(
+      danger = c(0, 20),
+      warning = c(20, 80),
+      success = c(80, 100)
+    )
+  )  
 ```
 
-Column {data-width=350}
------------------------------------------------------------------------
+### Last Submission Date {.value-box}
+```{r}
+valueBox(value = last_submission$hfs_00X[1], 
+         caption = "Date of last submission", 
+         icon = "fas fa-calendar", 
+         color = tested_color)
+```
 
-### Chart B
+### Team that made last submission
 
 ```{r}
-
+last_submission <- last_submission %>% 
+    dplyr::mutate(
+        team = NA,
+        team = ifelse(hfs_007 %in% c("Clara_Are", "Wilbert_Neiembe", 
+                                     "Florence_Lawrence"), 1, team),
+        team = ifelse(hfs_007 %in% c("Jacob_Girupano", "Melvin_Kualawi"), 2, team),
+        team = ifelse(hfs_007 %in% c("Micah_Muri", "Ismart_Martin"), 3, team)
+    )  
+valueBox(value = paste0("Team ", last_submission$team[1]), 
+         caption = "made last submission", 
+         icon = "fas fa-upload", 
+         color = positive_color)
 ```
 
-### Chart C
+### Total health facility completed {.value-box}
 
 ```{r}
+valueBox(value = sum(hf_num$n), 
+         caption = "Total HF completed", 
+         icon = "fas fa-hospital", 
+         color = recovered_color)
+```
 
+### Total health center completed {.value-box}
+
+```{r}
+valueBox(value = hf_num$n[2], 
+         caption = "Total HC completed", 
+         icon = "fas fa-procedures", 
+         color = death_color)
 ```
 
 
+### Total aid post completed {.value-box}
+
+```{r}
+valueBox(value = hf_num$n[1], 
+         caption = "Total AP completed", 
+         icon = "fas fa-heartbeat", 
+         color = h_symptoms_color)
+```
 
