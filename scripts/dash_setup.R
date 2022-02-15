@@ -93,3 +93,6 @@ hf_num <- hfc_v3 %>%
     dplyr::mutate(hfs_005X = ifelse(hfs_005X == 1, "Aidpost", "Health Center")) %>% 
     dplyr::group_by(hfs_005X) %>% 
     dplyr::summarise(n = dplyr::n())
+
+
+print(hf_num)
