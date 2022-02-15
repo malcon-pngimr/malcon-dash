@@ -16,6 +16,6 @@ jobs:
           ref: 'main'
       - name: Render scripts and build site
         run: |
-            bash ./scripts/data_refresh.sh "main" "$PAT_KEY" 
+            bash ./scripts/data_refresh.sh "main" "$PAT_KEY"
         env:     
           PAT_KEY: ${{ secrets.PAT_KEY }} 
