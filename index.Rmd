@@ -33,7 +33,8 @@ gauge(
 
 ### Last Submission Date {.value-box}
 ```{r}
-valueBox(value = last_submission$hfs_00X[1], 
+last_submit_date <- last_submission$hfs_00X[1]
+valueBox(value = last_submit_date, 
          caption = "Date of last submission", 
          icon = "fas fa-calendar", 
          color = tested_color)
@@ -89,7 +90,7 @@ valueBox(value = hf_num$n[1],
 Column {data-width=625}
 -----------------------------------------------------------------------
 
-### Survey Progress by Province (as of `r last_submission$hfs_00X[1]`)
+### Survey Progress by Province (as of `r last_submit_date`)
 
 ```{r}
 # png_map %>% 
