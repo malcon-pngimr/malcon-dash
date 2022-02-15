@@ -89,7 +89,7 @@ valueBox(value = hf_num$n[1],
 Column {data-width=625}
 -----------------------------------------------------------------------
 
-### Survey Progress by Province (as of `r Sys.Date()`)
+### Survey Progress by Province (as of `r last_submission$hfs_00X[1]`)
 
 ```{r}
 # png_map %>% 
