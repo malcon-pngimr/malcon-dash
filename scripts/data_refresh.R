@@ -19,6 +19,7 @@ for (x in 1:length(fid)) {
     cat("successfully imported ", fid[x], " ... \n")
 }
 
+print(ls())
 
 # packages ----------------------------------------------------------------
 
