@@ -45,6 +45,24 @@ window.FlexDashboardComponents = [];
 <script src="site_libs/gauge-binding-0.5.2/gauge.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<script src="site_libs/plotly-binding-4.10.0/plotly.js"></script>
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="site_libs/plotly-htmlwidgets-css-2.5.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="site_libs/plotly-main-2.5.1/plotly-latest.min.js"></script>
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="site_libs/datatables-binding-0.20/datatables.js"></script>
+<link href="site_libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="site_libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="site_libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script>
+<link href="site_libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet" />
+<script src="site_libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
+<link href="site_libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet" />
+<script src="site_libs/selectize-0.12.0/selectize.min.js"></script>
+<link href="site_libs/dt-plugin-searchhighlight-1.11.3/source.css" rel="stylesheet" />
+<script src="site_libs/dt-plugin-searchhighlight-1.11.3/jquery.highlight.js"></script>
+<script src="site_libs/dt-plugin-searchhighlight-1.11.3/source.min.js"></script>
 <style type="text/css">
 
 /*
@@ -837,6 +855,7 @@ html, body {
 </div><!--/.container-->
 </div><!--/.navbar-->
 
+<img class="mobile-figure" data-mobile-figure-id=fig1 src="index_files/figure-html/unnamed-chunk-8-1.mb.png" />
 <script type="text/javascript">
 
 
@@ -2638,8 +2657,8 @@ window.FlexDashboardComponents.push({
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div id="htmlwidget-854d29fab5bb2afa38fc" style="width:576px;height:460.8px;" class="gauge html-widget"></div>
-<script type="application/json" data-for="htmlwidget-854d29fab5bb2afa38fc">{"x":{"value":59.09,"min":0,"max":100,"customSectors":[{"lo":80,"hi":100,"color":"success"},{"lo":20,"hi":80,"color":"warning"},{"lo":0,"hi":20,"color":"danger"}],"symbol":"%","label":null,"humanFriendly":true,"humanFriendlyDecimal":1,"href":null},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-7a92cc6a0de759c7907b" style="width:576px;height:460.8px;" class="gauge html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7a92cc6a0de759c7907b">{"x":{"value":59.09,"min":0,"max":100,"customSectors":[{"lo":80,"hi":100,"color":"success"},{"lo":20,"hi":80,"color":"warning"},{"lo":0,"hi":20,"color":"danger"}],"symbol":"%","label":null,"humanFriendly":true,"humanFriendlyDecimal":1,"href":null},"evals":[],"jsHooks":[]}</script>
 </div>
 <div id="last-submission-date" class="section level3 value-box">
 <h3 class="value-box">Last Submission Date</h3>
@@ -2677,6 +2696,86 @@ window.FlexDashboardComponents.push({
 <p><span class="value-output" data-caption="Total AP completed" data-icon="fas fa-heartbeat" data-color="#e5383b">13</span></p>
 </div>
 </div>
+<div id="column-1" class="section level2" data-width="625">
+<h2>Column</h2>
+<div id="survey-progress-by-province-as-of-2022-02-15" class="section level3">
+<h3>Survey Progress by Province (as of 2022-02-15)</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+</div>
+</div>
+<div id="column-2" class="section level2" data-width="500">
+<h2>Column</h2>
+<div id="total-no.-of-forms-submitted" class="section level3">
+<h3>Total no. of forms submitted</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<p><img src="index_files/figure-html/unnamed-chunk-8-1.png" width="576" data-figure-id=fig1 /></p>
+</div>
+<div id="total-no.-of-forms-submitted-by-survey-teams" class="section level3">
+<h3>Total no. of forms submitted by survey teams</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div id="htmlwidget-2ee9bf310fcb3d6da437" style="width:576px;height:460.8px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2ee9bf310fcb3d6da437">{"x":{"visdat":{"8c4b223975":["function () ","plotlyVisDat"]},"cur_data":"8c4b223975","attrs":{"8c4b223975":{"y":{},"x":{},"orientation":"h","text":{},"textposition":"auto","marker":{"color":"#1f77b4"},"name":"Form 1","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"},"8c4b223975.1":{"y":{},"x":{},"orientation":"h","text":{},"textposition":"auto","marker":{"color":"forestgreen"},"name":"Form 2","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar","inherit":true},"8c4b223975.2":{"y":{},"x":{},"orientation":"h","text":{},"textposition":"auto","marker":{"color":"red"},"name":"Form 3","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar","inherit":true}},"layout":{"margin":{"b":10,"l":20,"t":30,"r":10,"pad":2},"title":"","barmode":"stack","yaxis":{"domain":[0,1],"automargin":true,"title":"Teams","type":"category","categoryorder":"array","categoryarray":["1","2","3"]},"xaxis":{"domain":[0,1],"automargin":true,"title":"Number of forms submitted by type"},"hovermode":"compare","legend":{"x":0.7,"y":0.5},"showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"y":["1","2","3"],"x":[14,9,17],"orientation":"h","text":[14,9,17],"textposition":["auto","auto","auto"],"marker":{"color":"#1f77b4","line":{"color":"rgba(31,119,180,1)"}},"name":"Form 1","type":"bar","error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"y":["1","2","3"],"x":[40,4,53],"orientation":"h","text":[40,4,53],"textposition":["auto","auto","auto"],"marker":{"color":"forestgreen","line":{"color":"rgba(255,127,14,1)"}},"name":"Form 2","type":"bar","error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null},{"y":["1","2","3"],"x":[40,4,53],"orientation":"h","text":[40,4,53],"textposition":["auto","auto","auto"],"marker":{"color":"red","line":{"color":"rgba(44,160,44,1)"}},"name":"Form 3","type":"bar","error_y":{"color":"rgba(44,160,44,1)"},"error_x":{"color":"rgba(44,160,44,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="field-visit-summary" class="section level1">
+<h1>Field Visit Summary</h1>
+<div id="column-3" class="section level2 tabset tabset-fade">
+<h2 class="tabset tabset-fade">Column</h2>
+<div id="overall-issues" class="section level3">
+<h3>Overall issues</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div id="htmlwidget-123e8c605c570055bbbe" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-123e8c605c570055bbbe">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"date\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"1631318400000\" data-max=\"1639267200000\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[["2021-12-12","2021-12-06","2021-11-28","2021-11-28","2021-11-23","2021-11-20","2021-11-15","2021-11-02","2021-10-20","2021-10-20","2021-10-11","2021-10-10","2021-09-26","2021-09-22","2021-09-19","2021-09-11","2021-09-11"],["Team  1","Team  1","Team  2","Team  1","Team  3","Team  1","Team  1","Team  3","Team  3","Team  3","Team  2","Team  1","Team  1","Team  2","Team  1","Team  1","Team  1"],["EAST NEW BRITAIN","EAST NEW BRITAIN","SOUTHERN HIGHLANDS","BOUGAINVILLE","GULF","BOUGAINVILLE","BOUGAINVILLE","EAST SEPIK","EAST SEPIK","EAST SEPIK","HELA","NCD","CHIMBU","ENGA","CHIMBU","CHIMBU","CHIMBU"],["During the time of survey, there was a hold-up at Vunapope that really affected the survey at Vunapope DH. A gang of criminals break into the staffs houses and stole valuable items of staffs at Vunapope. The facility management decided to close general outpatient department and deal with emergency cases only. Thus the outpatient was close during the survey week. It is quite impossible to replace the facility as the survey was already started. The team only completed the provider interviews and the checklist as there were not many emergency cases during time of survey.\n\nThe team will commence HFS at Gelagela SC this week and travel to Kokopo on 18th December 2021, and travel to Goroka on 19th December.\n\nGelagela SC HFS\nDates: 13-17/12/2021","Covid-19 surge has seriously affected the survey. Napapar SC was closed a week prior to ENB HFS due to most staffs infected with Covid-19. The facility resumes normal operations during the time of survey which resulted in few patients lining up for treatment.\n\nIn terms of logistic arrangements, PMU must consult field team leaders with type of accommodation (room types) and car arrangments before collecting quotations for payments to avoid inconveniences in the field which may affect the survey.\n\nVunapope Hospital HFS\nDates: 06-11/12/2021","The only issue the team encountered was that there was a scale down of outpatient operation at the Mendi UC because of Covid-19. Therefore, the team was not able to achieve a good outcome for the survey at the facility simply because of patients not turning up for outpatient services. This will be captured fully in the field report.","District hospital have been scaled down due to Covid-19 surge and misinformation on vaccinations with Covid- 19 vaccines limitimg patients to attend health facility for health care services. Daily routine of Arawa DH is normal, however, limited number of patients presenting at the facility during time of survey.","The team were not able visit the Aid posts due to distance and accessibility and also the cost not captured in the budget.","Hospital daily operations have been scaled down due to Covid-19 surge in the region; general outpatient was closed, staffs seeing only emergency cases. This resulted in less form 3 completed. Also staffs on shifts hours thus few available for completion of form 2.","There are two governments operating in AROB; Bougainville Government and PNG Government. Thus approval must be received from both governments. There is a need for third member to join team in order to collect enough data for the survey in this time when Covid-19 surge and lockdowns causing scale down of work and hange in hf daily operations.","Most of the services in this health facility have been scaled down hence a quarter of the health facility staff were infected.This has resulted in health care providers performance very weak and poor","This health facility was just open a week ago after closing for almost 14 years","1. Wombisa HC has been closed on the third day of visit, 13/10/21(Wednesday) due to an incident that occured the previous night 12/10/21 (Tuesday). \nThe drunkards have attacked the HF staffs and badly injured their security guard (broken head). Therefore, we were not able to continue our work. \n\nAll Aid-posts in the catchment area of Wombisa HF were closed during the visit due to staff shortage. The team visited 3 Aidposts which one was recently opened during the time of visit and 2 are still closed, however will re-open in the coming weeks. \n\nThe three Aidposts visited by the team are;\n1. Kwanjiviak AP - recently open\n2. Jambitanget AP - still closed \n3. Saranguandu AP - still closed","Field summary Form completed sucessfully at Ajageiba AP.","Covid 19 surge in NCD reduces number of patients and staff limitation","Water shortage in the Kundiawa Hospital which resulted in closure of hospital and thus working half a day.","There is very limited malaria services provided at the hospital.","Ismart Martin travelled to Goroka to check on his family because they were all sick and needed his assistance.\n\nDate of travel: 13/09/2021\nReturn date: 18/09/2021\n\nThe team is now with all members and ready to commence survey in Kundiawa Hospital on 20-24/09/2021.","AP staff was sick and did not open facility for daily service on day of survey.","Gumine HC has been replaced with Wandi SC.\n\nReasons are as follow:\n\n1. No nearby accomodation within Gumine HC or guest house for the team to reside at Gumine;\n\n2. Alot of road blocks along Gumine road causing team's insecurity to work in Gumine HC;\n\n3. In the 1st back up list, Kundiawa UC does not have a operational outpatient;\n\n4. Also in 1st back up list, Kerowagi HC is not operational due to lack of medicine supplies;\n\nI will send justification letter from Simbu PDCO for confirmation via email if required."]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>submission date<\/th>\n      <th>team<\/th>\n      <th>province<\/th>\n      <th>issue<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"searchHighlight":true,"scrollY":"600px","order":[],"autoWidth":false,"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="issue-with-field-budgets" class="section level3">
+<h3>Issue with field budgets</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div id="htmlwidget-130b3330ca7e5d61356c" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-130b3330ca7e5d61356c">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[["2021-10-10"],["Team  1"],["NCD"],["Field cash advance and staff travelling allowances processed 1 week late"]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>submission date<\/th>\n      <th>team<\/th>\n      <th>province<\/th>\n      <th>issue<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"searchHighlight":true,"scrollY":"600px","order":[],"autoWidth":false,"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="stock-out-of-field-supplies" class="section level3">
+<h3>Stock-out of field supplies</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div id="htmlwidget-3092d492ceb9d1f10e7f" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3092d492ceb9d1f10e7f">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[[],[],[],[]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>submission date<\/th>\n      <th>team<\/th>\n      <th>province<\/th>\n      <th>issue<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"searchHighlight":true,"scrollY":"600px","order":[],"autoWidth":false,"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="incident-of-transportation" class="section level3">
+<h3>Incident of transportation</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div id="htmlwidget-6e748ee882c4a6bfb99b" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6e748ee882c4a6bfb99b">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[["2021-12-05"],["Team  2"],["SOUTHERN HIGHLANDS"],["There was transport problem faced by the team"]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>submission date<\/th>\n      <th>team<\/th>\n      <th>province<\/th>\n      <th>issue<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"searchHighlight":true,"scrollY":"600px","order":[],"autoWidth":false,"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="about" class="section level1">
+<h1>About</h1>
+<p><strong>The MalCon Monitoring Dashboard</strong></p>
+<p>This <a href="https://myominnoo.github.io/malcon-dash/">MalCon Monitoring Dashboard</a> provides an overview of the progress of the health facility survey 2021 conducted by the Malaria Control Section (MalCon) at the Papua New Guinea Institute of Medical Research (PNGMIR). This dashboard is built in the framework of reproducibile research using Rmarkdown and GitHub action workflows.</p>
+<p><strong>Data</strong></p>
+<p>The input data for this dashboard are from the ODK Central platform that is hosted by Swiss Tropical and Public Health Institute. The data and dashboard are refreshed on a daily basis.</p>
+<p><strong>Packages</strong></p>
+<ul>
+<li>Dashboard interface - the <code>flexdashboard</code> package.</li>
+<li>Visualization - the <code>plotly</code> package for the plots and mapview package for the map</li>
+<li>Data manipulation - <code>dplyr</code>, and <code>tidyr</code></li>
+<li>Tables - the <code>DT</code> package</li>
+</ul>
+<p><strong>Credits</strong> The projects by <a href="https://github.com/RamiKrispin/">Rami Krispin</a> inspires this dashboard.</p>
 </div>
 
 </div>
