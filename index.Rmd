@@ -50,7 +50,7 @@ last_submission <- last_submission %>%
         team = ifelse(hfs_007 %in% c("Jacob_Girupano", "Melvin_Kualawi"), 2, team),
         team = ifelse(hfs_007 %in% c("Micah_Muri", "Ismart_Martin"), 3, team)
     )  
-valueBox(value = last_submission$team[1], 
+valueBox(value = paste0("Team ", last_submission$team[1]), 
          caption = "Team that made last submission", 
          icon = "fas fa-upload", 
          color = positive_color)
