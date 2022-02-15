@@ -8,7 +8,8 @@ jobs:
     name: render dashboard site
     runs-on: ubuntu-18.04 
     container: 
-     image: myominnoo/dashboard:malcon0.1
+     image: docker.io/rkrispin/covid19italy_dash:dev
+     # image: myominnoo/dashboard:malcon0.1
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
