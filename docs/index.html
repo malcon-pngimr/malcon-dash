@@ -8,9 +8,9 @@
 
 
 
-<title>Untitled</title>
+<title>Health Facility Survey 2021: The MalCon Monitoring Dashboard</title>
 
-<meta property="og:title" content="Untitled" />
+<meta property="og:title" content="Health Facility Survey 2021: The MalCon Monitoring Dashboard" />
 
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
 
@@ -38,6 +38,13 @@ window.FlexDashboardComponents = [];
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
 <script src="site_libs/stickytableheaders-0.1.19/jquery.stickytableheaders.min.js"></script>
+<script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="site_libs/raphael-2.1.4/raphael-2.1.4.min.js"></script>
+<link href="site_libs/justgage-1.2.2.1/justgage.css" rel="stylesheet" />
+<script src="site_libs/justgage-1.2.2.1/justgage.js"></script>
+<script src="site_libs/gauge-binding-0.5.2/gauge.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 <style type="text/css">
 
 /*
@@ -815,7 +822,7 @@ html, body {
   
 </span>
 <span class="navbar-brand">
-  Untitled
+  Health Facility Survey 2021: The MalCon Monitoring Dashboard
   <span class="navbar-author">
         </span>
 </span>
@@ -2622,32 +2629,52 @@ window.FlexDashboardComponents.push({
 
 <div id="dashboard-container">
 
-<div id="column" class="section level2" data-width="650">
+<div id="summary" class="section level1">
+<h1>Summary</h1>
+<div id="column" class="section level2" data-width="150">
 <h2>Column</h2>
-<div id="chart-a" class="section level3">
-<h3>Chart A</h3>
+<div id="survey-progress---13-22-provinces-completed" class="section level3 gauge">
+<h3 class="gauge">Survey Progress - 13 / 22 provinces completed</h3>
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<pre><code># A tibble: 2 × 2
-  hfs_005X          n
-  &lt;chr&gt;         &lt;int&gt;
-1 Aidpost          13
-2 Health Center    27</code></pre>
+<div id="htmlwidget-854d29fab5bb2afa38fc" style="width:576px;height:460.8px;" class="gauge html-widget"></div>
+<script type="application/json" data-for="htmlwidget-854d29fab5bb2afa38fc">{"x":{"value":59.09,"min":0,"max":100,"customSectors":[{"lo":80,"hi":100,"color":"success"},{"lo":20,"hi":80,"color":"warning"},{"lo":0,"hi":20,"color":"danger"}],"symbol":"%","label":null,"humanFriendly":true,"humanFriendlyDecimal":1,"href":null},"evals":[],"jsHooks":[]}</script>
 </div>
-</div>
-<div id="column-1" class="section level2" data-width="350">
-<h2>Column</h2>
-<div id="chart-b" class="section level3">
-<h3>Chart B</h3>
+<div id="last-submission-date" class="section level3 value-box">
+<h3 class="value-box">Last Submission Date</h3>
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
+<p><span class="value-output" data-caption="Date of last submission" data-icon="fas fa-calendar" data-color="purple">2022-02-14</span></p>
 </div>
-<div id="chart-c" class="section level3">
-<h3>Chart C</h3>
+<div id="team-that-made-last-submission" class="section level3">
+<h3>Team that made last submission</h3>
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
+</div>
+<p><span class="value-output" data-caption="made last submission" data-icon="fas fa-upload" data-color="#CE1256">Team 1</span></p>
+</div>
+<div id="total-health-facility-completed" class="section level3 value-box">
+<h3 class="value-box">Total health facility completed</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<p><span class="value-output" data-caption="Total HF completed" data-icon="fas fa-hospital" data-color="forestgreen">40</span></p>
+</div>
+<div id="total-health-center-completed" class="section level3 value-box">
+<h3 class="value-box">Total health center completed</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<p><span class="value-output" data-caption="Total HC completed" data-icon="fas fa-procedures" data-color="#660708">27</span></p>
+</div>
+<div id="total-aid-post-completed" class="section level3 value-box">
+<h3 class="value-box">Total aid post completed</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<p><span class="value-output" data-caption="Total AP completed" data-icon="fas fa-heartbeat" data-color="#e5383b">13</span></p>
 </div>
 </div>
 </div>
