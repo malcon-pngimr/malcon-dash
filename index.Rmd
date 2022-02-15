@@ -7,7 +7,7 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-# source("scripts/dash_setup.R")
+source("scripts/dash_setup.R")
 library(flexdashboard)
 ```
 
