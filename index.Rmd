@@ -7,7 +7,7 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-source("docs/scripts/data_refresh.R")
+source("scripts/dash_setup.R")
 ```
 
 
@@ -51,7 +51,7 @@ last_submission <- last_submission %>%
         team = ifelse(hfs_007 %in% c("Micah_Muri", "Ismart_Martin"), 3, team)
     )  
 valueBox(value = paste0("Team ", last_submission$team[1]), 
-         caption = "Team that made last submission", 
+         caption = "made last submission", 
          icon = "fas fa-upload", 
          color = positive_color)
 ```
