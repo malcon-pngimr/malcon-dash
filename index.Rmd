@@ -194,10 +194,10 @@ Column {.tabset .tabset-fade}
 ### Overall issues
 
 ```{r}
-fvs_v3 <- fvs_v3 %>% 
+fvs_v1 <- fvs_v1 %>% 
     dplyr::mutate(hfs_00XA = paste("Team ", hfs_00XA), 
                   hfs_00X = as.Date(sub("T.*", "", hfs_00X), format = "%Y-%m-%d"))
-fvs_v3 %>% 
+fvs_v1 %>% 
     dplyr::select(hfs_00X, hfs_00XA, hfs_001A, hfs_46) %>%  
     dplyr::filter(!grepl("nil|none|success", 
                          tolower(hfs_46))) %>% 
@@ -214,7 +214,7 @@ fvs_v3 %>%
 ### Issue with field budgets
 
 ```{r}
-fvs_v3 %>% 
+fvs_v1 %>% 
     dplyr::select(hfs_00X, hfs_00XA, hfs_001A, hfs_43) %>% 
     dplyr::filter(!grepl("nil|none|no issue|did not encounter|wasn't any|wasnt", 
                          tolower(hfs_43))) %>% 
@@ -231,7 +231,7 @@ fvs_v3 %>%
 ### Stock-out of field supplies
     
 ```{r}
-fvs_v3 %>% 
+fvs_v1 %>% 
     dplyr::select(hfs_00X, hfs_00XA, hfs_001A, hfs_44) %>%
     dplyr::filter(!grepl("nil|none|no stock-out|not stock-out|did not have|no stockout|was not|did not|were not|no stock|wasn't|wasnt", 
                          tolower(hfs_44))) %>% 
@@ -248,7 +248,7 @@ fvs_v3 %>%
 ### Incident of transportation
 
 ```{r}
-fvs_v3 %>% 
+fvs_v1 %>% 
     dplyr::select(hfs_00X, hfs_00XA, hfs_001A, hfs_45) %>%  
     dplyr::filter(!grepl("nil|none|did not have|was not|did not|were not|no|wasn't|wasnt", 
                          tolower(hfs_45))) %>% 

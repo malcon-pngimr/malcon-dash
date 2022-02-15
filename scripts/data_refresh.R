@@ -17,7 +17,7 @@ print(pat_key)
 # Set form id and url as characters
 fid <- c(form1 = "hfc_v3", form2 = "pi_v3",
          form3 = "ppa_v3", form4 = "ei_v3",
-         form5 = "fvs_v3")
+         form5 = "fvs_v1")
 
 # Set current raw file url from repo 
 url_data_old <- "raw.githubusercontent.com/myominnoo/malcon/main/data/"
@@ -105,10 +105,10 @@ png_map <- rnaturalearth::ne_states(country = "Papua New Guinea",
 # create form ids 
 fid <- c(form1 = "hfc_v3", form2 = "pi_v3",
          form3 = "ppa_v3", form4 = "ei_v3",
-         form5 = "fvs_v3")
+         form5 = "fvs_v1")
 form_submit <- data.frame(fid = names(fid), 
                           num = c(nrow(hfc_v3), nrow(pi_v3), 
-                                  nrow(ppa_v3), nrow(ei_v3), nrow(fvs_v3)))
+                                  nrow(ppa_v3), nrow(ei_v3), nrow(fvs_v1)))
 
 # separate health center and aidpost
 hf_num <- hfc_v3 %>% 

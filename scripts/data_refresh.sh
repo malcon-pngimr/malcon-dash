@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Rscript -e "source('./scripts/data_refresh.R')" $2
-Rscript -e "rmarkdown::render_site()" 
+Rscript -e "(pat_key <- Sys.getenv('PAT_KEY')); print(pat_key); rmarkdown::render_site()" 
 
 
 if [[ "$(git status --porcelain)" != "" ]]; then
