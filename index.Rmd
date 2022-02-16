@@ -93,11 +93,11 @@ Column {data-width=625}
 ### Survey Progress by Province (as of `r last_submit_date`)
 
 ```{r}
-# png_map %>% 
-#     dplyr::mutate(province = toupper(province), 
-#                   n = ifelse(is.na(n), 0, n)) %>%
-#     dplyr::rename(`No. HF completed` = n) %>% 
-#     mapview::mapview(zcol = "No. HF completed")
+png_map %>%
+    dplyr::mutate(province = toupper(province),
+                  n = ifelse(is.na(n), 0, n)) %>%
+    dplyr::rename(`No. HF completed` = n) %>%
+    mapview::mapview(zcol = "No. HF completed")
 ```
 
 

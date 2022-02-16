@@ -77,22 +77,22 @@ png_prov <- hfc_v3 %>%
     dplyr::group_by(province) %>%
     dplyr::summarise(n = dplyr::n())
 
-# png_map <- rnaturalearth::ne_states(country = "Papua New Guinea", 
-#                                     returnclass = "sf") %>%
-#     dplyr::select(province = name, geometry) %>%
-#     dplyr::group_by(province) %>%
-#     dplyr::summarise(n = dplyr::n()) %>%
-#     dplyr::select(-n) %>% 
-#     dplyr::mutate(
-#         province = tolower(province), 
-#         province = ifelse(province == "national capital district", 
-#                           "ncd", province), 
-#         ## Assuming North solomons is close to bougainville
-#         ## TODO: check if this is correct
-#         province = ifelse(province == "north solomons", "bougainville", 
-#                           province)
-#     ) %>% 
-#     dplyr::left_join(png_prov, by = "province") 
+png_map <- rnaturalearth::ne_states(country = "Papua New Guinea",
+                                    returnclass = "sf") %>%
+    dplyr::select(province = name, geometry) %>%
+    dplyr::group_by(province) %>%
+    dplyr::summarise(n = dplyr::n()) %>%
+    dplyr::select(-n) %>%
+    dplyr::mutate(
+        province = tolower(province),
+        province = ifelse(province == "national capital district",
+                          "ncd", province),
+        ## Assuming North solomons is close to bougainville
+        ## TODO: check if this is correct
+        province = ifelse(province == "north solomons", "bougainville",
+                          province)
+    ) %>%
+    dplyr::left_join(png_prov, by = "province")
 
 
 # create form ids 
