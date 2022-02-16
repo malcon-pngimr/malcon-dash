@@ -160,11 +160,16 @@ dplyr::bind_rows(
             textposition = 'auto',
             name = "Form 2",
             marker = list(color = "forestgreen")) %>%
-    plotly::add_trace(x = ~ form_2, 
-            text =  ~ form_2,
+    plotly::add_trace(x = ~ form_3, 
+            text =  ~ form_3,
             textposition = 'auto',
             name = "Form 3",
             marker = list(color = "red")) %>%
+    plotly::add_trace(x = ~ form_4, 
+            text =  ~ form_4,
+            textposition = 'auto',
+            name = "Form 4",
+            marker = list(color = "blue")) %>%
     plotly::layout(title = "",
             barmode = 'stack',
             yaxis = list(title = "Teams"),
