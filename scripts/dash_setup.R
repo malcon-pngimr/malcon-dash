@@ -12,7 +12,6 @@
 # import data -------------------------------------------------------------
 
 pat_key <- Sys.getenv("PAT_KEY")
-print(pat_key)
 
 # Set form id and url as characters
 fid <- c(form1 = "hfc_v3", form2 = "pi_v3",
