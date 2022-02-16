@@ -4,7 +4,7 @@ This [MalCon Monitoring Dashboard](https://myominnoo.github.io/malcon-dash/) pro
 
 **Data**
 
-The input data for this dashboard are from the ODK Central platform that is hosted by Swiss Tropical and Public Health Institute. The data and dashboard are refreshed on a daily basis.
+The input data for this dashboard comes from the ODK Central platform that is hosted by Swiss Tropical and Public Health Institute. The data and dashboard are refreshed on a daily basis.
 
 **Packages**
 
