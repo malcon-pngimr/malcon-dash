@@ -4,7 +4,12 @@ This [MalCon Monitoring Dashboard](https://myominnoo.github.io/malcon-dash/) pro
 
 **Data**
 
-The input data for this dashboard comes from the ODK Central platform that is hosted by Swiss Tropical and Public Health Institute. The data and dashboard are refreshed on a daily basis.
+The input data for this dashboard is the [Data Automation site](https://github.com/myominnoo/malcon) which is a private repository on GitHub. This repository retrieves daily data updates from the ODK Central platform hosted by the Swiss TPH. 
+
+## Technical Notes
+
+**Codes**
+This dashboard is built with R using [Rmakrdown](https://rmarkdown.rstudio.com/) and [flexdashboard](https://rmarkdown.rstudio.com/flexdashboard/) framework, and can easily reproduce by others. The code behind the dashboard available [here](https://github.com/myominnoo/malcon-dash)
 
 **Packages**
 
@@ -13,5 +18,5 @@ The input data for this dashboard comes from the ODK Central platform that is ho
 - Data manipulation - `dplyr`, and `tidyr`
 - Tables - the `DT` package
 
-**Credits**
+**Acknowledgement**
 The projects by [Rami Krispin](https://github.com/RamiKrispin/) inspires this dashboard. 

@@ -1,6 +1,8 @@
-name: Render HFS Dashboard site
+name: Render site
 
 on:
+  schedule:
+  - cron: "0 0 * * *" # at the end of everyday
   push:
     branches: [ main ]
 jobs:
