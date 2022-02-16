@@ -7,11 +7,6 @@
 
 # Set up Environment  -----------------------------------------------------
 
-Sys.setenv(UDUNITS2_LIBS="/path/to/udunits2/lib")
-Sys.setenv(UDUNITS2_INCLUDE="/path/to/udunits2/include")
-
-install.packages("udunits2")
-
 
 # import data -------------------------------------------------------------
 
