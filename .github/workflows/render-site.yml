@@ -10,7 +10,7 @@ jobs:
     name: render dashboard site
     runs-on: ubuntu-18.04 
     container: 
-     image: myominnoo/dashboard:malcon0.3
+     image: myominnoo/dashboard:prod
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
