@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Rscript -e "source('./scripts/data_refresh.R')"
-Rscript -e "rmarkdown::render_site()"
+# Rscript -e "rmarkdown::render_site()"
 
 
 if [[ "$(git status --porcelain)" != "" ]]; then
