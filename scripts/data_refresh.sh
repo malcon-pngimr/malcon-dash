@@ -1,13 +1,6 @@
 #!/usr/bin/env bash
 
-# Rscript -e "source('./scripts/data_refresh.R')"
-# rm -r docs
-if [[ ! -e docs ]]; then
-    mkdir docs
-elif [[ ! -d docs ]]; then
-    echo "docs already exists but is not a directory" 1>&2
-fi
-
+Rscript -e "source('./scripts/data_refresh.R')"
 # Rscript -e "rmarkdown::render_site()"
 
 
