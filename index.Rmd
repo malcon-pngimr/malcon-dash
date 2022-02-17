@@ -9,7 +9,6 @@ output:
 ```{r setup, include=FALSE}
 source("scripts/dash_setup.R")
 library(flexdashboard)
-fs::dir_create("docs")
 ```
 
 Summary
