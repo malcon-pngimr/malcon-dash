@@ -16,10 +16,6 @@ jobs:
         uses: actions/checkout@v2
         with: 
           ref: 'main'
-      - name: Create docs folder
-        run: |
-          mkdir -p docs 
-          ls docs
       - name: Render scripts and build site
         run: |
             bash ./scripts/data_refresh.sh "main" "$PAT_KEY"

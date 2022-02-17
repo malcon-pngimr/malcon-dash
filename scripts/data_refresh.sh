@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+
+mkdir docs
+touch docs/test.txt
+ls docs 
 # Rscript -e "source('./scripts/data_refresh.R')"
 # Rscript -e "rmarkdown::render_site()"
 
