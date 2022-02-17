@@ -22,10 +22,3 @@ jobs:
         env:     
           PAT_KEY: ${{ secrets.PAT_KEY }} 
       
-      - name: Commit changes
-        uses: EndBug/add-and-commit@v8
-        with:
-          author_name: Myo Minn Oo
-          author_email: dr.myominnoo@gmail.com
-          message: 'Auto pull of the HFS data on $(date)'
-          add: '*'
