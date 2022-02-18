@@ -62,7 +62,7 @@ valueBox(value = hf_total,
 ### Total health center completed {.value-box}
 
 ```{r}
-hf_hc <- paste0(hf_type$n[2], " (", round(hf_type$n[2]/hf_total*100, 2), "%)")
+hf_hc <- paste0(hf_type$n[2], " (", round(hf_type$n[2]/hf_total*100, 0), "%)")
 valueBox(value = hf_hc,
          caption = paste0("Health centers out of ", hf_total, " HF"), 
          icon = "fas fa-procedures", 
@@ -73,7 +73,7 @@ valueBox(value = hf_hc,
 ### Total aid post completed {.value-box}
 
 ```{r}
-hf_ap <- paste0(hf_type$n[1], " (", round(hf_type$n[1]/hf_total*100, 2), "%)")
+hf_ap <- paste0(hf_type$n[1], " (", round(hf_type$n[1]/hf_total*100, 0), "%)")
 valueBox(value = hf_ap, 
          caption = paste0("Aid posts out of ", hf_total, " HF"),
          icon = "fas fa-heartbeat", 
@@ -84,7 +84,7 @@ valueBox(value = hf_ap,
 ### Total hospital completed {.value-box}
 
 ```{r}
-hf_hosp <- paste0(hf_type$n[3], " (", round(hf_type$n[3]/hf_total*100, 2), "%)")
+hf_hosp <- paste0(hf_type$n[3], " (", round(hf_type$n[3]/hf_total*100, 0), "%)")
 valueBox(value = hf_hosp, 
          caption = paste0("Hospitals out of ", hf_total, " HF"),
          icon = "fas fa-heartbeat", 
