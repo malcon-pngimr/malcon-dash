@@ -97,7 +97,7 @@ Column {data-width=625}
     
 ### Survey Progress by Province (as of `r last_submit_date`)
 
-Note that the figures for **Hela** and **Jiwaka** are combined with those of **Southern Highlands** and **Western Highlands** because the `rnaturalearth` package only allows `20` provinces instead of `22`. 
+Note that the figures for **Hela** and **Jiwaka** are combined with those of **Southern Highlands** and **Chimbu** because the `rnaturalearth` package only allows `20` provinces instead of `22`. 
 
 ```{r}
 clrs <- c("ffffff", "ffbe0b",

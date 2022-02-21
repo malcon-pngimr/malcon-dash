@@ -58,9 +58,13 @@ home_conf_color <- "#FDBBBC"
 hfc <- hfc %>% 
     dplyr::mutate(hfs_000X = as.Date(hfs_000X), 
                   hfs_014 = as.Date(hfs_014)) %>%
-    dplyr::mutate(hfs_004X = ifelse(hfs_004X == 1, "Aid Post", "Health Center"), 
-                  hospital = grepl("hospital", tolower(hfs_003XA)),
-                  hfs_004X = ifelse(hospital, "Hospital", hfs_004X))
+    ## remove three records for pilot hospital submissions 
+    dplyr::mutate(pilot = grepl("Maprik DH|KUNDIAWA HOSPITAL", hfs_003A) | 
+                      grepl("Wabag Hospital", hfs_003XA)) %>% 
+    dplyr::filter(!pilot) %>%
+    dplyr::mutate(hf_type = ifelse(hfs_004X == 1, "Aid Post", "Health Center"),
+                  hf_type = ifelse(hfs_004 %in% c("PH", "DH"), "Hospital", hf_type)) %>% 
+    dplyr::select(-pilot) 
 
 # province completed
 province_complete <- hfc %>%
@@ -84,10 +88,10 @@ last_submission <- hfc %>%
         team = ifelse(hfs_010 %in% team4, 4, team)
     )   
 
+
 # separate health center and aidpost
 hf_type <- hfc %>%
-    dplyr::select(hfs_004X, hospital, hfs_003XA) %>%
-    dplyr::group_by(hfs_004X) %>%
+    dplyr::group_by(hf_type) %>%
     dplyr::summarise(n = dplyr::n()) 
 
 
@@ -100,7 +104,7 @@ png_prov <- hfc %>%
                   province = ifelse(province == "hela",
                                     "southern highlands", province),
                   province = ifelse(province == "jiwaka",
-                                    "western highlands", province)) %>%
+                                    "chimbu", province)) %>%
     dplyr::group_by(province) %>%
     dplyr::summarise(n = dplyr::n())
 
