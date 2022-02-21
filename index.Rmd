@@ -120,6 +120,11 @@ form_submit %>%
     ggplot(aes(fid, num, fill = fid)) +
     geom_bar(stat = "identity") +
     geom_text(aes(label=num), position=position_dodge(width=0.9), vjust=-0.25) + 
+    scale_fill_manual(
+        "legend", 
+        values = c("form1" = "#f94144", "form2" = "#f3722c", 
+                   "form3" = "#90be6d", "form4" = "#277da1")
+    ) + 
     labs(title = "", x = "Form ID", y = "No. of forms submitted") +
     theme(legend.position="none")
 ```   
@@ -162,22 +167,22 @@ dplyr::bind_rows(
                     textposition = 'auto',
                     type = "bar", 
                     name = "Form 1: Health Facility Checklist",
-                    marker = list(color = "#1f77b4")) %>% 
+                    marker = list(color = "#f94144")) %>% 
     plotly::add_trace(x = ~ form_2,
                       text =  ~ form_2,
                       textposition = 'auto',
                       name = "Form 2: Provider Interview",
-                      marker = list(color = "forestgreen")) %>%
+                      marker = list(color = "#f3722c")) %>%
     plotly::add_trace(x = ~ form_3, 
                       text =  ~ form_3,
                       textposition = 'auto',
                       name = "Form 3: Patient Provider Assessment",
-                      marker = list(color = "red")) %>%
+                      marker = list(color = "#90be6d")) %>%
     plotly::add_trace(x = ~ form_4, 
                       text =  ~ form_4,
                       textposition = 'auto',
                       name = "Form 4: Exit Interview",
-                      marker = list(color = "blue")) %>%
+                      marker = list(color = "#277da1")) %>%
     plotly::layout(title = "",
                    barmode = 'stack',
                    yaxis = list(title = "Teams"),
