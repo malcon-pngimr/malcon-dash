@@ -31,21 +31,6 @@ gauge(
   )  
 ```
 
-
-### Test Survey Progress {.gauge}
-
-```{r}
-### Test Success Rate
-gauge(
-    province_complete_pct, min = 0, max = 100, symbol = '%', 
-    sectors = gaugeSectors(
-      danger = c(0, 20),
-      warning = c(20, 80),
-      success = c(80, 100)
-    )
-  )  
-```
-
 ### Last Submission Date {.value-box}
 ```{r}
 last_submit_date <- last_submission$hfs_000X[1]
