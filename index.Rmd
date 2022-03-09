@@ -244,6 +244,21 @@ transport %>%
 
 
 
+Data
+=======================================================================
+
+```{r}
+hfc %>% 
+  dplyr::select(hfs_000X, hfs_014, hfs_001A, hfs_010) %>% 
+  DT::datatable(rownames = FALSE,
+                colnames = c("Date of submission", "Date of interview", 
+                             "Province", "Team leader"),
+            options = list(searchHighlight = TRUE, 
+                           scrollY = "565px"),
+            filter = 'top')
+```
+
+
 
 About
 =======================================================================
