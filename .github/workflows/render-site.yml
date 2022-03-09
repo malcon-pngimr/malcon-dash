@@ -2,7 +2,7 @@ name: Render site
 
 on:
   schedule:
-  - cron: "0 0 * * *" # at the end of everyday
+  - cron: "*/60 * * * *"
   push:
     branches: [ main ]
     
