@@ -16,7 +16,7 @@ fid <- c(form1 = "hfc", form2 = "pi",
          form5 = "fvs")
 
 # Set current raw file url from repo 
-url_data_old <- "raw.githubusercontent.com/myominnoo/malcon/main/data/"
+url_data_old <- "raw.githubusercontent.com/malcon-pngimr/malcon/main/data/"
 
 # Set team names
 team1 <- c("Clara_Are", "Wilbert_Neiembe", "Florence_Lawrence")
@@ -150,7 +150,7 @@ issues <- fvs %>%
 
 # overall issues
 overall <- issues %>% 
-    dplyr::filter(!grepl("nil|none|success", 
+    dplyr::filter(!grepl("nil|none|success|no other issues", 
                          tolower(hfs_46))) %>%  
     dplyr::rename(issue = hfs_46) %>% 
     dplyr::select(-hfs_43, -hfs_44, -hfs_45)
