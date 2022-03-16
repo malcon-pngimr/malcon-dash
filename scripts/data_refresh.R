@@ -150,7 +150,7 @@ issues <- fvs %>%
 
 # overall issues
 overall <- issues %>% 
-    dplyr::filter(!grepl("nil|none|success|no other issues", 
+    dplyr::filter(!grepl("nil|none|success|no other issues|no issues", 
                          tolower(hfs_46))) %>%  
     dplyr::rename(issue = hfs_46) %>% 
     dplyr::select(-hfs_43, -hfs_44, -hfs_45)
